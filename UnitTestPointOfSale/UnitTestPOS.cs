@@ -31,5 +31,15 @@ namespace UnitTestPointOfSale
             double totalCost = Pos.Bills.Sum(p => p.Cost);
             Assert.IsTrue(totalCost == 2.05);
         }
+
+        /// <summary>
+        /// Final total cost after discount
+        /// </summary>
+        [TestMethod]
+        public void TestPOSBillAmountWithOffer()
+        {
+            double totalCost = Pos.Bills.Sum(p => p.Cost);
+            Assert.IsTrue(totalCost == 1.45);
+        }
     }
 }
