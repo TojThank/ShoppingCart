@@ -26,10 +26,10 @@ namespace ShoppingCart
                         switch (item.Key)
                         {
                             case "Apple":
-                                bills.Add(new Bill(new Apple(), item.Value));
+                                bills.Add(new DiscountB1G1(new Apple(), item.Value));
                                 break;
                             case "Orange":
-                                bills.Add(new Bill(new Orange(), item.Value));
+                                bills.Add(new DiscountB2G1(new Orange(), item.Value));
                                 break;
                         }
                     }
