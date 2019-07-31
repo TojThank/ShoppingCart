@@ -9,6 +9,6 @@ namespace ShoppingCart
     /// </summary>
     public class PointOfSale
     {
-        public object Bills { get; set; }
+        public List<Bill> Bills { get; set; }
     }
 }

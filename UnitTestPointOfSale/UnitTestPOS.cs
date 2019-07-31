@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ShoppingCart;
-
+using System.Linq;
 namespace UnitTestPointOfSale
 {
     [TestClass]
@@ -22,6 +22,14 @@ namespace UnitTestPointOfSale
             Assert.IsTrue(Pos.Bills.Count == 2);
         }
 
-       
+        /// <summary>
+        /// Final total cost
+        /// </summary>
+        [TestMethod]
+        public void TestPOSBillAmount()
+        {
+            double totalCost = Pos.Bills.Sum(p => p.Cost);
+            Assert.IsTrue(totalCost == 2.05);
+        }
     }
 }
