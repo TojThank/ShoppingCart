@@ -10,7 +10,7 @@ namespace UnitTestPointOfSale
         PointOfSale Pos;
         public UnitTestPOS()
         {
-            Pos = new PointOfSale();
+            Pos = new PointOfSale(items);
         }
 
         /// <summary>
